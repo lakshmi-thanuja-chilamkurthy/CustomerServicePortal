@@ -1,0 +1,46 @@
+<!-- <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head> -->
+<body>
+    <table class="table table-striped table-hover" style="background-color:white">
+        <thead style="background-color:aquamarine">
+            <td>Request ID</td>
+            <td>Customer Id</td>
+            <td>Customer Name</td>
+            <td>Request Name</td>
+            <td>Request Description</td>
+            <td>Service Type</td>
+            <td>Req Status</td>
+            <td>Created Date</td>
+        </thead>
+
+        <tr *ngFor ="let request of requests">
+      
+
+            <td>{{request.reqId}}</td>
+    
+            <td>{{request.customerId}}</td>
+    
+            <td>{{request.customerName}}</td>
+    
+            <td>{{request.reqName}}</td>
+    
+            <td>{{request.reqdescription}}</td>
+    
+            <td>{{request.serviceType}}</td>
+
+            <td>{{request.reqStatus}}</td>
+    
+            <td>{{request.date}}</td>
+    
+        <!-- <td><button (click) ='deleteBook(book.id)'>Delete Book</button></td> -->
+    
+          </tr><br>
+    </table>
+</body>
+<!-- </html> -->
+
+

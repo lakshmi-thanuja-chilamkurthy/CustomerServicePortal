@@ -1,0 +1,13 @@
+<h1>Request Status</h1>
+
+    <body>
+        Customer Id:<br><input type="number" name="customerId" [(ngModel)]="customerId"><br><br>
+        Request Status:<br><input type="text" name="status" [(ngModel)]="status"><br><br>
+  
+        <button (click)=getrequest() class="btn btn-success">
+          Search
+        </button><br><br>
+        <app-requestresponse *ngIf="request" [requests]="request"></app-requestresponse>>
+      
+      </body>
+      

@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1 align="center">Customers List</h1>
+
+    <table class="center" style="background-color:white">
+      <thead style="background-color:aquamarine">
+        <td>Customer Id</td>
+        <td>Customer Name</td>
+        <td>Address</td>
+        <td>State</td>
+        <td>Country</td>
+        <td>DOB</td>
+        <td>PAN</td>
+        <td>Contact Number</td>
+        <td>Contact Preference</td>
+        </thead>
+
+        <tr *ngFor ="let request of customers">
+
+        <td>{{request.id}}</td>
+        <td>{{request.customername}}</td>
+        <td>{{request.address}}</td>
+        <td>{{request.state}}</td>
+        <td>{{request.country}}</td>
+        <td>{{request.dob}}</td>
+        <td>{{request.pan}}</td>        
+        <td>{{request.contactNo}}</td>
+        <td>{{request.contactPreference}}</td>
+        </tr>
+        <br>
+  <!-- <button routerLink="/createbook" class='btn btn-dark' > Back </button> -->
+    </table>
+</body>
+</html>   
+

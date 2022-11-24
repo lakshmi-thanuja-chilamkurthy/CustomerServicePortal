@@ -1,0 +1,57 @@
+<div class="container">
+    <label for="name"><b>Enter Customer ID</b></label>
+    <input type="number" name="customerid" [(ngModel)]="customerId"><br>  
+    <button type="button" class="btn btn-info" (click)="findcustomer()">Getdetails</button>
+  <!-- </div>
+    <div  class="container"> -->
+        <h2>Update Customer Details</h2>
+        <label for="name"><b>Username</b></label>
+        <input type="text" id="name" name="name" class="form-control"
+        required minlength="4" placeholder="Eneter Username"
+        [(ngModel)]="users.customername" #name="ngModel">
+    
+        <div *ngIf="name.errors?.['minlength']">
+        Name must be at least 4 characters long.
+        </div>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" id="password" name="password" class="form-control"
+        required minlength="4" placeholder="Enter valid Password"
+        [(ngModel)]="users.password" #name="ngModel">
+      
+        <div *ngIf="name.errors?.['minlength']">
+        password must be at least 4 characters long.
+        </div>
+
+        <label for="Address"><b>Address</b></label>
+        <input type="text" placeholder="Enter Address" class="form-control" name="Address" required [(ngModel)]="users.address">
+        <label for="State"><b>State</b></label>
+
+        <input type="text" placeholder="Enter State" class="form-control" name="State" required [(ngModel)]="users.state">
+        <label for="Country"><b>Country</b></label>
+
+        <input type="text" placeholder="Enter Country" class="form-control" name="Country" required [(ngModel)]="users.country">
+        <label for="Email"><b>EmailId</b></label>
+
+        <input type="text" placeholder="Enter Email" class="form-control" name="Email" required [(ngModel)]="users.emailId">
+        <label for="PAN"><b>PAN Number</b></label>
+
+        <input type="text" placeholder="Enter PAN" class="form-control" name="PAN" required [(ngModel)]="users.pan">
+        <label for="Phone"><b>Phone</b></label>
+
+        <input type="number" placeholder="Enter Phone number" class="form-control" name="Phone" required [(ngModel)]="users.contactNo">
+        <label for="DOB"><b>DOB</b></label><br>
+
+        <input type="date" placeholder="Enter date of birth" class="form-control" name="DOB" required [(ngModel)]="users.dob"><br>
+
+        <label for="contact preference"><b>Contact Preference</b></label> <br> 
+    <!-- <input type="text" placeholder="Enter Email or phone number" class="form-control" name="contact preference"  [(ngModel)]="users.contactPreference" #contact preference="ngModel"><br> -->
+
+    <select [(ngModel)] ='users.contactPreference' type="text" name="contact preference" class="form-control"  style="width: 36.5%;">
+        <option value="emailId">emailId</option>
+        <option value="contactNo">contactNo</option>
+    </select><br><br>
+        <button type="button" class="btn btn-info" (click)="update()">Save</button>
+
+    
+  </div>
