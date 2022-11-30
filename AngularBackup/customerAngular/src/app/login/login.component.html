@@ -1,0 +1,55 @@
+<form #loginform="ngForm" (ngSubmit)="login()">
+
+    <div class="container">
+        <h1>CUSTOMER SERVICE PORTAL</h1>
+        <!-- <label for="psw"><b>Username</b></label>
+        <input type="text" id="name" name="name" class="form-control"
+        required minlength="4" placeholder="Enter Username"
+        [(ngModel)]="users.customername" #name="ngModel">
+        <div *ngIf="name.errors?.['required']">
+          Name is required.
+        </div>
+        
+        <div *ngIf="name.errors?.['minlength']">
+            Name must be at least 4 characters long.
+        </div>
+      
+              <input type="text" id="name" name="name" pattern="[a-zA-Z ]*" class="form-control"-->
+
+        <label for="name"><b>Username(EmailId)*</b></label>
+
+        <input type="email" id="name" name="name" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+
+        class="form-control" required minlength="4" placeholder="Enter EmailId"
+        [(ngModel)]="users.emailId" #name="ngModel" >
+        <span class="text-danger" *ngIf="name.touched && name.errors?.['required']">
+        EmailId is required.
+        </span>
+        <span class="text-danger" *ngIf="name.errors?.['pattern']">
+        should contain email pattern.
+        </span><br>
+        <!-- <span class="text-danger" *ngIf="name.errors?.['minlength']">
+        Name must be at least 4 characters long.
+        </span><br> -->
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" id="password" name="password" class="form-control"
+        required minlength="4" placeholder="Enter valid Password"
+        [(ngModel)]="users.password" #name="ngModel">
+        <!-- <div *ngIf="name.errors?.['required']">
+          password is required.
+        </div> -->
+        <div *ngIf="name.errors?.['minlength']">
+          password must be at least 4 characters long.
+        </div>
+
+        <button class="col-md-6" type="submit" class="btn btn-success" [disabled]="!loginform.valid">Login</button>
+
+        <div>
+          <p>If New User? Please SignUp</p>
+        <button type="submit" class="btn btn-success" routerLink='/register'>SignUp</button>
+      </div>
+
+    </div>
+</form>
+        
